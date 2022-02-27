@@ -1,0 +1,219 @@
+.bannertext_container {
+  transform: translate(-10vw, -80px);
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
+  position: relative;
+  clear: both;
+  margin: 0 auto;
+  padding: 1em 0 1em;
+  max-width: 1000px;
+  list-style: none;
+  text-align: center;
+}
+/* apollo */
+/* Common style */
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  /* margin: 10px 1%; */
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  width: 48%;
+  height: auto;
+  /* background: #3085a3; */
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid figure h2 span {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+figure.effect-winston {
+  text-align: left;
+  width: 100%;
+}
+
+figure.effect-winston img {
+  -webkit-transition: all 0.45s;
+  transition: all 0.45s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: black;
+}
+
+figure.effect-winston figcaption::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/images/triangle.svg) no-repeat center center;
+  background-size: 100% 100%;
+  content: "";
+  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+  transition: opacity 0.45s, transform 0.45s;
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+figure.effect-winston h2 {
+  max-width: 50%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+}
+
+figure.effect-winston p {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -10px;
+  bottom: -10px;
+  padding: 0 1.5em 7% 0;
+}
+
+figure.effect-winston a {
+  margin: 0 10px;
+  color: #5d504f;
+  font-size: 170%;
+}
+
+figure.effect-winston a:hover,
+figure.effect-winston a:focus {
+  color: #cc6055;
+}
+
+figure.effect-winston p a .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 0;
+  font-size: 13px;
+  color: rgb(42, 42, 156);
+  font-weight: bolder;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 50px, 0);
+}
+
+figure.effect-winston:hover img {
+  opacity: 0.8;
+  background-color: rgb(79, 79, 248);
+}
+
+figure.effect-winston:hover h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+figure.effect-winston:hover figcaption::before {
+  opacity: 0.7;
+  -webkit-transform: rotate3d(0, 0, 1, 20deg);
+  transform: rotate3d(0, 0, 1, 20deg);
+}
+
+figure.effect-winston:hover p .icon {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+figure.effect-winston:hover p a:nth-child(3) .icon {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+figure.effect-winston:hover p a:nth-child(2) .icon {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+figure.effect-winston:hover p a:first-child .icon {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+@media (max-width: 650px) {
+  .banner_desc {
+    display: none;
+  }
+  .bannertext_container {
+    transform: translateY(70px);
+    background-color: black;
+  }
+  .bannertitle {
+    display: none;
+  }
+}
