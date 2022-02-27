@@ -4,7 +4,6 @@ import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
 import millify from "millify";
-import { propertyDetails } from "../../utils/data/propertyDetails";
 import { baseUrl, fetchApi } from "../../utils/fetchApi";
 import ImageScrollbar from "../../components/ImageScrollbar";
 import { useEffect } from "react";
@@ -168,10 +167,10 @@ const PropertyDetails = ({
 export default PropertyDetails;
 
 export async function getServerSideProps({ params: { id } }) {
-  // const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
+  const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
   return {
     props: {
-      propertyDetails,
+      propertyDetails: data,
     },
   };
 }

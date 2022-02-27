@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Flex, Box, Text, Button } from "@chakra-ui/react";
-import { forRent } from "../utils/data/forrent";
-import { forSale } from "../utils/data/forsale";
 import Property from "../components/Property";
 import { baseUrl, fetchApi } from "../utils/fetchApi";
 import { useEffect } from "react";
@@ -117,8 +115,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      propertiesForSale: forSale,
-      propertiesForRent: forRent,
+      propertiesForSale: propertyForSale?.hits,
+      propertiesForRent: propertyForRent?.hits,
     },
   };
 }

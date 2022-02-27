@@ -24,33 +24,6 @@ const Property = ({
   },
 }) => (
   <Link href={`/property/${externalID}`} passHref>
-    {/* <div class="grid">
-      <figure class="effect-winston">
-        <Image
-          src={coverPhoto ? coverPhoto.url : DefaultImage}
-          width={400}
-          height={260}
-        />
-        <figcaption>
-          <h2>
-            Jolly <span>Winston</span>
-          </h2>
-          <p>
-            <a href="#">
-              <i class="fa fa-fw fa-star-o"></i>
-            </a>
-            <a href="#">
-              <i class="fa fa-fw fa-comments-o"></i>
-            </a>
-            <a href="#">
-              <i class="fa fa-fw fa-envelope-o"></i>
-            </a>
-          </p>
-        </figcaption>
-        
-      </figure>
-      
-    </div> */}
     <Flex
       flexWrap="wrap"
       w="420px"
@@ -116,16 +89,6 @@ const Property = ({
             <Avatar size="sm" src={agency?.logo?.url}></Avatar>
           </Box>
         </Flex>
-        {/* <Flex
-          alignItems="center"
-          p="1"
-          justifyContent="space-between"
-          w="250px"
-          color="blue.500"
-        >
-          {rooms}
-          <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
-        </Flex> */}
         <Text
           fontSize="lg"
           fontFamily="Century Gothic,Arial, Helvetica, sans-serif"
