@@ -53,7 +53,7 @@
 }
 
 .grid figure figcaption,
-.grid figure figcaption > a {
+.grid figure figcaption > .item {
   position: absolute;
   top: 0;
   left: 0;
@@ -62,8 +62,8 @@
 }
 
 /* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
-.grid figure figcaption > a {
+/* For some effects it will show as .item button */
+.grid figure figcaption > .item {
   z-index: 1000;
   text-indent: 200%;
   white-space: nowrap;
@@ -141,18 +141,18 @@ figure.effect-winston p {
   padding: 0 1.5em 7% 0;
 }
 
-figure.effect-winston a {
+figure.effect-winston .item {
   margin: 0 10px;
   color: #5d504f;
   font-size: 170%;
 }
 
-figure.effect-winston a:hover,
-figure.effect-winston a:focus {
+figure.effect-winston .item:hover,
+figure.effect-winston .item:focus {
   color: #cc6055;
 }
 
-figure.effect-winston p a .icon {
+figure.effect-winston p .item .icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,17 +190,17 @@ figure.effect-winston:hover p .icon {
   transform: translate3d(0, 0, 0);
 }
 
-figure.effect-winston:hover p a:nth-child(3) .icon {
+figure.effect-winston:hover p .item:nth-child(3) .icon {
   -webkit-transition-delay: 0.05s;
   transition-delay: 0.05s;
 }
 
-figure.effect-winston:hover p a:nth-child(2) .icon {
+figure.effect-winston:hover p .item:nth-child(2) .icon {
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
 
-figure.effect-winston:hover p a:first-child .icon {
+figure.effect-winston:hover p .item:first-child .icon {
   -webkit-transition-delay: 0.15s;
   transition-delay: 0.15s;
 }

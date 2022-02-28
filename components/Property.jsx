@@ -32,35 +32,31 @@ const Property = ({
       justifyContent="flex-start"
       cursor="pointer"
     >
-      <div class="grid">
-        <figure class="effect-winston">
+      <div className="grid">
+        <figure className="effect-winston">
           <Image
             src={coverPhoto ? coverPhoto.url : DefaultImage}
             width={400}
             height={260}
           />
           <figcaption>
-            <h2>
-              Estate
-              <span>Companion</span>
-            </h2>
             <p>
-              <a href="#">
+              <div className="item">
                 <div className="icon">
                   {rooms}
                   <FaBed />
                 </div>
-              </a>
-              <a href="#">
+              </div>
+              <div className="item">
                 <div className="icon">
                   {baths} <FaBath />
                 </div>
-              </a>
-              <a href="#">
+              </div>
+              <div className="item">
                 <div className="icon">
                   {millify(area)} sqft <BsGridFill />
                 </div>
-              </a>
+              </div>
             </p>
           </figcaption>
         </figure>
